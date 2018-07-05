@@ -1,0 +1,15 @@
+ .centro1 {
+  margin: 10vw 0 0 0;
+
+}
+
+.letra {
+font-size: 4vw;
+  -webkit-text-fill-color: rgb(53, 45, 45);
+  -webkit-text-stroke-color: rgb(252, 249, 232);
+  -webkit-text-stroke-width: 0.10vw;
+
+}
+.separ {
+ height: 5vw;
+}
