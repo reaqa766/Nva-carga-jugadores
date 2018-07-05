@@ -23,6 +23,10 @@ import { RegisterComponent } from './components/register/register.component';
 import { NewsComponent } from './components/news/news.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { PlayerseComponent } from './components/players/playerse/playerse.component';
+import { PlayerseListComponent } from './components/players/playerse-list/playerse-list.component';
+import { PitcherseListComponent } from './components/pitchers/pitcherse-list/pitcherse-list.component';
+import { PitcherseComponent } from './components/pitchers/pitcherse/pitcherse.component';
 
 
 
@@ -34,7 +38,9 @@ const routes: Routes = [
   { path: 'player', component: PlayerComponent },
   { path: 'player/player-list', component: PlayerListComponent },
   { path: 'pitcher', component: PitcherComponent },
-  { path: 'players/pitcher/pitcher-list', component: PitcherListComponent }
+  { path: 'pitcher-list', component: PitcherListComponent }
+  { path: 'playerse', component: PlayerseComponent }
+  { path: 'pitcherse', component: PitcherseComponent }
 ];
 
 
@@ -52,7 +58,11 @@ const routes: Routes = [
     RegisterComponent,
     NewsComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    PlayerseComponent,
+    PlayerseListComponent,
+    PitcherseListComponent,
+    PitcherseComponent
   ],
   imports: [
     BrowserModule,
