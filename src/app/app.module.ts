@@ -38,8 +38,8 @@ const routes: Routes = [
   { path: 'player', component: PlayerComponent },
   { path: 'player/player-list', component: PlayerListComponent },
   { path: 'pitcher', component: PitcherComponent },
-  { path: 'pitcher-list', component: PitcherListComponent }
-  { path: 'playerse', component: PlayerseComponent }
+  { path: 'pitcher-list', component: PitcherListComponent },
+  { path: 'playerse', component: PlayerseComponent },
   { path: 'pitcherse', component: PitcherseComponent }
 ];
 
