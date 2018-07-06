@@ -1,30 +1,64 @@
-<div class="container-fluid ">
-<h1 class="align1">CARGA</h1>
+<div class="container-fluid  ">
+<h1 class="align1">CARGA PLAYERS DIARIO</h1>
+<h5 class="cuadro" ><a routerLink="/playerse"  class="cuadro align1">
+  Player Temp </a></h5>
+
 
 <form class="my-5">.
 
   <div class="container " >
     <div class="row ">
-      <div class="col-md-6 marg">
+      <div class="col-md-3 marg">
+        <div class="container bacg1">
 
-    <h1 class="align1">Cargar</h1>
-    <div class="container">
-      <input type="text" placeholder="Player name" class="mr-4">
+          <h6 class="text-center bg-dark text-white letr2 " >CARGAR</h6>
+
+    <div class="container ">
+        <label for="inputname " class="col-sm-2 col-form-label letr">Name</label>
+      <input type="text" class="mb-2 ml-3" id="inputname" placeholder="Player name" >
     </div>
 
-    <div class="container my-4">
-      <input type="text" placeholder="Player Lastname">
+    <div class="container ">
+        <label for="inputLname " class="col-sm-2 col-form-label letr">Lname</label>
+      <input type="text" placeholder="Player Lastname" id="inputLname" class="mb-2 ml-3">
     </div>
 
+    <div class="container ">
+        <label for="inputVBate " class="col-sm-2 col-form-label letr">VecesBate</label>
+      <input type="text" placeholder="VBate" class="mb-2 ml-3" id="inputVBate">
+    </div>
+
+    <div class="container ">
+        <label for="inputCAnot " class="col-sm-2 col-form-label letr">CAnot</label>
+      <input type="number" placeholder="CAnotadas" class="mb-2 ml-3" id="inputCAnot">
+    </div>
+
+    <div class="container ">
+        <label for="inputHits " class="col-sm-2 col-form-label letr">Hits</label>
+      <input type="text" placeholder="Hits" class="mb-2 ml-3" id="inputHits">
+    </div>
+
+    <div class="container ">
+        <label for="inputCEmp" class="col-sm-2 col-form-label letr">CEmpujadas</label>
+      <input type="text" placeholder="CEmpujadas" class="mb-2 ml-3" id="inputCEmp">
+    </div>
+
+    <div class="container ">
+        <label for="inputBRob " class="col-sm-2 col-form-label letr">BRobadas</label>
+      <input type="text" placeholder="Player Position" class="mb-2 ml-3" id="inputBRob">
+    </div>
+    <div class="container ">
+        <label for="inputHR " class="col-sm-2 col-form-label letr">HomeRun</label>
+      <input type="text" placeholder="Homerun" class="mb-2 ml-3" id="inputHR">
+    </div>
+
+  </div>
       </div>
 
-      <div class="col-md-6 marg">
+      <div class="col-md-8 marg">
 
-    <h1 class="align1">Listar</h1>
 
-    <input type="text" placeholder="Player name" class="mr-4">
-    <input type="text" placeholder="Player Lastname" >
-
+          <app-player-list></app-player-list>
 
       </div>
 
