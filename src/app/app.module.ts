@@ -27,6 +27,8 @@ import { PlayerseComponent } from './components/players/playerse/playerse.compon
 import { PlayerseListComponent } from './components/players/playerse-list/playerse-list.component';
 import { PitcherseListComponent } from './components/pitchers/pitcherse-list/pitcherse-list.component';
 import { PitcherseComponent } from './components/pitchers/pitcherse/pitcherse.component';
+import { LoginComponent } from './components/login/login.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 
 
@@ -36,11 +38,13 @@ const routes: Routes = [
   { path: 'players', component: PlayersComponent },
   { path: 'pitchers', component: PitchersComponent },
   { path: 'player', component: PlayerComponent },
-  { path: 'player/player-list', component: PlayerListComponent },
+  { path: 'player-list', component: PlayerListComponent },
   { path: 'pitcher', component: PitcherComponent },
   { path: 'pitcher-list', component: PitcherListComponent },
   { path: 'playerse', component: PlayerseComponent },
-  { path: 'pitcherse', component: PitcherseComponent }
+  { path: 'pitcherse', component: PitcherseComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'admin', component: AdminComponent }
 ];
 
 
@@ -62,11 +66,13 @@ const routes: Routes = [
     PlayerseComponent,
     PlayerseListComponent,
     PitcherseListComponent,
-    PitcherseComponent
+    PitcherseComponent,
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
