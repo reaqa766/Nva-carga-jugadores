@@ -21,28 +21,28 @@ export class NavbarComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.onCheckUserLogin();
+    // this.onCheckUserLogin();
 
     }
 
-  onCheckUserLogin() {
-   this.playersService.getAuth().subscirbe( auth => {
-     if (auth) {
-      this.isLogin = true;
-      this.userName = auth.displayname;
-      this.userEmail = auth.email;
-      this.userPicture = auth.photoUrl;
-      this.userId = auth.uid;
-    } else {
-        this.isLogin = false;
+  // onCheckUserLogin() {
+  //  this.playersService.getAuth().subscirbe( auth => {
+  //    if (auth) {
+  //     this.isLogin = true;
+  //     this.userName = auth.displayname;
+  //     this.userEmail = auth.email;
+  //     this.userPicture = auth.photoUrl;
+  //     this.userId = auth.uid;
+  //   } else {
+  //       this.isLogin = false;
 
-     }
-   });
+  //    }
+  //  });
 
-  }
+  // }
 
-  onLogout() {
-    this.playersService.logout();
-  }
+  // onLogout() {
+  //   this.playersService.logout();
+  // }
 
 }

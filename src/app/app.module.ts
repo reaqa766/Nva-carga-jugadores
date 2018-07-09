@@ -11,7 +11,12 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 
- import {PlayersService } from './services/players.service';
+import {PlayersService } from './services/players.service';
+import {PlayeridService } from './services/playerid.service';
+
+import {FormsModule } from '@angular/forms';
+
+
 import { PlayersComponent } from './components/players/players.component';
 import { PlayerComponent } from './components/players/player/player.component';
 import { PlayerListComponent } from './components/players/player-list/player-list.component';
@@ -27,7 +32,7 @@ import { PlayerseComponent } from './components/players/playerse/playerse.compon
 import { PlayerseListComponent } from './components/players/playerse-list/playerse-list.component';
 import { PitcherseListComponent } from './components/pitchers/pitcherse-list/pitcherse-list.component';
 import { PitcherseComponent } from './components/pitchers/pitcherse/pitcherse.component';
-import { LoginComponent } from './components/login/login.component';
+// import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './components/admin/admin.component';
 
 
@@ -43,7 +48,7 @@ const routes: Routes = [
   { path: 'pitcher-list', component: PitcherListComponent },
   { path: 'playerse', component: PlayerseComponent },
   { path: 'pitcherse', component: PitcherseComponent },
-  { path: 'login', component: LoginComponent },
+  // { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent }
 ];
 
@@ -67,7 +72,7 @@ const routes: Routes = [
     PlayerseListComponent,
     PitcherseListComponent,
     PitcherseComponent,
-    LoginComponent,
+    // LoginComponent,
     AdminComponent
   ],
   imports: [
@@ -76,9 +81,10 @@ const routes: Routes = [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
     ],
-  providers: [PlayersService],
+  providers: [PlayersService, PlayeridService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
