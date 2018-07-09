@@ -9,9 +9,19 @@
   <a routerLink="/pitchers"  class="navbar-header text-white">
     Pitchers </a>
 
+    <!-- <div class="ng-container"  **ngIf="!isLogin">-->
 
+    <!--<a routerLink="/login"  class="navbar-link text-white">
+      Login </a>
+    </div>-
 
+        <div class="ng-container"  **ngIf="isLogin">
+        <span class="nav-link text-white" >{{userName}}</span>
+        </div>
 
+      <div class="ng-container"  **ngIf="isLogin">
+      <a class="nav-link text-white"   href="#" (click)="onLogout()">LogOut</a>
+    </div>
   <a routerLink=""  class="navbar-header text-white">
- HOME</a>
+ HOME</a>-->
 </nav>

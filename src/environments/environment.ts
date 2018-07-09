@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  firebase: {
+  firebaseConfig: {
     apiKey: 'AIzaSyDW5LPzUvc9O336O8FvfdD96fVlRdMnXLI',
     authDomain: 'grandes-ligas-cloud.firebaseapp.com',
     databaseURL: 'https://grandes-ligas-cloud.firebaseio.com',
