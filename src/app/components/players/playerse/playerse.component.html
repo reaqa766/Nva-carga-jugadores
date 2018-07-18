@@ -4,7 +4,7 @@
       Players Dia </a></h5>
 
 
-    <form class="my-5">.
+    <form class="my-5" (ngSubmit)="onSavePlayer()">.
 
       <div class="container " >
         <div class="row ">
@@ -15,67 +15,77 @@
 
         <div class="container ">
             <label for="inputname " class="col-sm-2 col-form-label letr">Name</label>
-          <input type="text" class="mb-2 ml-3" id="inputname" placeholder="Player name" >
+          <input type="text" class="mb-2 ml-3" id="inputname" placeholder="name"  name="inputname" [(ngModel)]="player.name">
         </div>
 
         <div class="container ">
             <label for="inputLname " class="col-sm-2 col-form-label letr">Lname</label>
-          <input type="text" placeholder="Player Lastname" id="inputLname" class="mb-2 ml-3">
+          <input type="text" placeholder="Lastname" id="inputLname" class="mb-2 ml-3"  name="inputLname" [(ngModel)]="player.lastname">
         </div>
 
         <div class="container ">
             <label for="inputposition " class="col-sm-2 col-form-label letr">Position</label>
-          <input type="text" placeholder="Player Position" class="mb-2 ml-3" id="inputposition">
+          <input type="text" placeholder="Position" class="mb-2 ml-3" id="inputposition" name="inputposition" [(ngModel)]="player.Position">
         </div>
 
         <div class="container ">
-            <label for="inputBDate " class="col-sm-2 col-form-label letr">BirthDay</label>
-          <input type="number" placeholder="Player Position" class="mb-2 ml-3" id="inputBDate">
+            <label for="inputBDate " class="col-sm-2 col-form-label letr">BirthDay</label >
+          <input type="date" placeholder="BirthDay" class="mb-2 ml-3" id="inputBDate" name="inputBDate" [(ngModel)]="player.Birdthdate">
         </div>
 
         <div class="container ">
-            <label for="inputDDate " class="col-sm-2 col-form-label letr">DebutDate</label>
-          <input type="text" placeholder="Player Position" class="mb-2 ml-3" id="inputDDate">
+            <label for="inputDDate " class="col-sm-2 col-form-label letr">DebutDate</label >
+          <input type="date" placeholder="Debut Day" class="mb-2 ml-3" id="inputDDate" name="inputDDate" [(ngModel)]="player.Gldate">
         </div>
 
         <div class="container ">
-            <label for="inputTeam " class="col-sm-2 col-form-label letr">Team</label>
-          <input type="text" placeholder="Player Position" class="mb-2 ml-3" id="inputTeam">
+            <label for="inputTeam " class="col-sm-2 col-form-label letr">Team</label >
+          <input type="text" placeholder="Team" class="mb-2 ml-3" id="inputTeam"  name="inputTeam" [(ngModel)]="player.team">
         </div>
 
-        <div class="container ">
-            <label for="inputposition " class="col-sm-2 col-form-label letr">Position</label>
-          <input type="text" placeholder="Player Position" class="mb-2 ml-3" id="inputposition">
-        </div>
         <div class="container ">
             <label for="inputVBate " class="col-sm-2 col-form-label letr">VecesBate</label>
-          <input type="text" placeholder="VBate" class="mb-2 ml-3" id="inputVBate">
+          <input type="text" placeholder="VBate" class="mb-2 ml-3" id="inputVBate"   name="inputVBate" [(ngModel)]="player.VBte">
         </div>
 
         <div class="container ">
             <label for="inputCAnot " class="col-sm-2 col-form-label letr">CAnot</label>
-          <input type="number" placeholder="CAnotadas" class="mb-2 ml-3" id="inputCAnot">
+          <input type="number" placeholder="CAnotadas" class="mb-2 ml-3" id="inputCAnot"  name="inputCAnot" [(ngModel)]="player.CAte">
         </div>
 
         <div class="container ">
-            <label for="inputHits " class="col-sm-2 col-form-label letr">Hits</label>
-          <input type="text" placeholder="Hits" class="mb-2 ml-3" id="inputHits">
+            <label for="inputHits " class="col-sm-2 col-form-label letr">Hits</label >
+          <input type="text" placeholder="Hits" class="mb-2 ml-3" id="inputHits"  name="inputHits" [(ngModel)]="player.hitste">
         </div>
 
         <div class="container ">
-            <label for="inputCEmp" class="col-sm-2 col-form-label letr">CEmpujadas</label>
-          <input type="text" placeholder="CEmpujadas" class="mb-2 ml-3" id="inputCEmp">
+            <label for="inputCEmp" class="col-sm-2 col-form-label letr">CEmpujadas</label >
+          <input type="text" placeholder="CEmpujadas" class="mb-2 ml-3" id="inputCEmp"  name="inputCEmp" [(ngModel)]="player.CEte">
         </div>
 
         <div class="container ">
-            <label for="inputBRob " class="col-sm-2 col-form-label letr">BRobadas</label>
-          <input type="text" placeholder="Player Position" class="mb-2 ml-3" id="inputBRob">
+            <label for="inputBRob " class="col-sm-2 col-form-label letr">BRobadas</label >
+          <input type="text" placeholder="Bases Robadas" class="mb-2 ml-3" id="inputBRob"  name="inputBRob" [(ngModel)]="player.BRte">
         </div>
         <div class="container ">
-            <label for="inputHR " class="col-sm-2 col-form-label letr">HomeRun</label>
-          <input type="text" placeholder="Homerun" class="mb-2 ml-3" id="inputHR">
+            <label for="inputHR " class="col-sm-2 col-form-label letr">HomeRun</label >
+          <input type="text" placeholder="Homerun" class="mb-2 ml-3" id="inputHR"  name="inputHR" [(ngModel)]="player.HRte">
         </div>
       </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit" (click)="onSavePlayer()">
+          <i class="fas fa-plus-circle"></i> Add Player
+        </button>
+         <div class="container">
+  
+        <!-- <button class="btn btn-secondary my-2 ml-2" type="reset" (click)="resetForm()">
+        <i class="fas fa-sync-alt"></i>Reset
+      </button> -->
+     </div>
+     </div>
+
+
+
           </div>
 
           <div class="col-md-8 marg">

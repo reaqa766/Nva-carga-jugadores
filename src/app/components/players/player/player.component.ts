@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PlayerInterface  } from '../../../models/player';
+import { Players  } from '../../../models/player';
 
 import { PlayeridService  } from '../../../services/playerid.service';
 
@@ -13,59 +13,91 @@ import { Router, ActivatedRoute  } from '@angular/router';
   styleUrls: ['./player.component.css']
 })
 export class PlayerComponent implements OnInit {
+  players: Players[];
   idPlayer: string;
-  player: PlayerInterface = {
-  id: undefined,
-  Avg: undefined,
-  BBOLAS: undefined,
-  BBOLASP: undefined,
-  BR: undefined,
-  Birdthdate: undefined,
-  CA: undefined,
-  CE: undefined,
-  CLIMP: undefined,
-  CSUC: undefined,
-  EFECT: undefined,
-  Gldate: undefined,
-  HPERM: undefined,
-  HR: undefined,
-  INNP: undefined,
-  PCHE: undefined,
-  PCHESR: undefined,
-  Position: undefined,
-  VB: undefined,
-  hits: undefined,
-  lastname: undefined,
-  name: undefined,
-  team: undefined
+  player: Players = {
+  id: '',
+  name: '',
+  Avg: '' ,
+  BBOLAS:'' ,
+  BBOLASP: '',
+  BR:'' ,
+  Birdthdate: '',
+  CA: '',
+  CE: '',
+  CLIMP: '',
+  CSUC: '',
+  EFECT: '',
+  Gldate: '',
+  HPERM: '',
+  HR: '',
+  INNP: '',
+  PCHE: '',
+  PCHESR: '',
+  Position: '',
+  VB: '',
+  hits: '',
+  lastname: '',
+ 
+  team: ''
    };
+
+
   constructor(
-    private playerIdService: PlayeridService,
+    private playeridService: PlayeridService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
 
+
+  
   ngOnInit() {
-    this.getDetallesReceta();
-  }
+    this.playeridService.getPlayers().subscribe(players => {
+      // console.log(players);
+      this.players = players;
+    })
+    }
 
-  getDetallesReceta() {
-    this.idPlayer = this.route.snapshot.params['id'];
-    this.playerIdService.getOnePlayer(this.idPlayer).subscribe( player => this.player = player);
-  }
+    onSavePlayer(){
+      if(this.player.name != '' && this.player.lastname != '') {
+        this.playeridService.addPlayer(this.player);
+        this.player.name='';
+        this.player.lastname='';
+        this.player.VB='';
+        this.player.CA='';
+        this.player.CE='';
+        this.player.BR='';
+        this.player.HR='';
+        this.player.hits='';
 
-  onModificarPlayer({value}: {value: PlayerInterface}) {
-    value.id = this.idPlayer;
-    this.playerIdService.updateplayer(value);
-    this.router.navigate(['/details/' + this.idPlayer]);
-  }
+      }} 
+
+  
+    // this.playeridService.getOnePlayer().subscribe(player => {
+    // console.log(player)
+
+    // this.getDetallesPlayer();
 
 
-  onSavePlayer({value}: {value: PlayerInterface}) {
-  console.log(value);
-  }
+  // getDetallesPlayer() {
+  //   this.idPlayer = this.route.snapshot.params['id'];
+  //   this.playerIdService.getOnePlayer(this.idPlayer).subscribe( player => this.player = player);
+  // }
 
-  }
+  // onModificarPlayer({value}: {value: PlayerInterface}) {
+  //   value.id = this.idPlayer;
+  //   this.playeridService.updateplayer(value);
+  //   this.router.navigate(['/details/' + this.idPlayer]);
+  // }
 
 
+  // onSavePlayer({value}: {value: PlayerInterface}) {
+  // console.log(value);
+  // }
 
+  // }
+ 
+
+
+    }
+ 

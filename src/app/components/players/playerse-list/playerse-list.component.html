@@ -17,3 +17,18 @@
   <th>Editar</th>
   <th>Borrar</th>
   </tr>
+  <tbody>
+    <tr *ngFor = "let player of players" class="text-center" >
+      <th>{{player.name}}</th>
+      <th>{{player.lastname}}</th>
+      <th>{{player.VBte}}</th>
+      <th>{{player.CAte}}</th>
+      <th>{{player.hitste}}</th>
+      <th>{{player.CEte}}</th>
+      <th>{{player.BRte}}</th>
+      <th>{{player.HRte}}</th>
+      <th class="text-center"  ><i class="far fa-edit "></i></th>
+      <th class="text-center" ><i class="far fa-trash-alt text-align:center" (dblclick)="deletePlayer($event, player)" ></i></th>
+
+    </tr>
+  </tbody>
