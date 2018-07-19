@@ -16,8 +16,55 @@
             <th>PO</th>
             <th>Ed</th>
             <th>Bor</th>
-          </tr>
-</tbody>
-</table>
-</div>
-</div>
+            <th class="text-center">
+                <i (click)="editPlayer($event, player)" class="far fa-edit "></i>
+              </th>
+              <th class="text-center">
+                <i class="far fa-trash-alt text-align:center" (dblclick)="deletePlayer($event, player)"></i>
+              </th>
+              <th class="text-center">
+                <i *ngIf="editState && playerToEdit.id == player.id" (click)="clearState()" class="fas fa-user-edit text-align:center"></i>
+              </th>
+            </tr>
+          </tbody>
+  
+        </table>
+  
+  
+            <div *ngFor="let player of players" class="text-center inline ">
+              <div *ngIf="editState && playerToEdit.id == player.id">
+                <form class="my-5 form-control" (ngSubmit)="updatePlayer(player)">.
+                  <!-- <div class="container  ">
+                        <div class="row " >-->
+                  <!-- <div class="col-md-12" >  -->
+                  <!-- <div class="container  "> -->
+                  <h4 class="text-center bg-dark text-white  ">EDITAR </h4>
+                  <ng-container >
+                    <input type="text" class="mb-2 m-3" id="inputname" placeholder="NAME" name="inputname" [(ngModel)]="player.name">
+                    <input type="text" class="mb-2 m-3" id="inputLname" placeholder="LASTNAME" name="inputLname" [(ngModel)]="player.lastname">
+                    <input type="number" class="mb-2 m-3" id="inputVBate" placeholder="VB" name="VB" [(ngModel)]="player.VB">
+                    <input type="number" class="mb-2 m-3" id="inputCA" placeholder="CA" name="CA" [(ngModel)]="player.CA">
+                    <input type="number" class="mb-2 m-3" id="inputhits" placeholder="HITS" name="hits" [(ngModel)]="player.hits">
+                    <input type="number" class="mb-2 m-3" id="inputCE" placeholder="CE" name="CE" [(ngModel)]="player.CE">
+                    <input type="number" class="mb-2 m-3" id="inputBR" placeholder="BR" name="BR" [(ngModel)]="player.BR">
+                    <input type="number" class="mb-2 m-3" id="inputHR" placeholder="HR" name="HR" [(ngModel)]="player.HR">
+                  </ng-container>
+  
+                  <!-- </div> -->
+                  <!-- </div>
+                        </div> -->
+                  <!-- </div> -->
+  
+                </form>
+                <input type="submit" value="Update Item" class="btn orange ">
+  
+              </div>
+  
+            </div>
+  
+        
+  
+      </div>
+  
+    </div>
+  </div>

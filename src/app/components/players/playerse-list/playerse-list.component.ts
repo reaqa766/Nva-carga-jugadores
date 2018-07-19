@@ -15,6 +15,8 @@ import { Router, ActivatedRoute  } from '@angular/router';
 export class PlayerseListComponent implements OnInit {
   players: Players[];
   idPlayer: string;
+  editState: boolean = false;
+  playerToEdit: Players;
   player: Players = {
   id: '',
   name: undefined,
@@ -74,17 +76,28 @@ INNPte: '',
     })
 
  
-  };
-
-  deletePlayer(event, player){
+  };deletePlayer(event, player: Players){
     this.playeridService.deletePlayer(player);
    
  
  }
-
  
-  }
-
+   editPlayer(event, player: Players) {
+   this.editState = true;
+   this.playerToEdit = player;
+ 
+ }
+ 
+   updatePlayer(player: Players){
+   this.playeridService.updatePlayer(player);
+   this.clearState();
+ }
+ 
+   clearState() {
+   this.editState = false;
+   this.playerToEdit = null;
+ }
+}
  
 
 

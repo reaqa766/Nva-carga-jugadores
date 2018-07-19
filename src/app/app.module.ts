@@ -35,6 +35,7 @@ import { PitcherseListComponent } from './components/pitchers/pitcherse-list/pit
 import { PitcherseComponent } from './components/pitchers/pitcherse/pitcherse.component';
 // import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { PlayerDataComponent } from './components/player-data/player-data.component';
 
 
 
@@ -50,7 +51,9 @@ const routes: Routes = [
   { path: 'playerse', component: PlayerseComponent },
   { path: 'pitcherse', component: PitcherseComponent },
   // { path: 'login', component: LoginComponent },
-  { path: 'admin', component: AdminComponent }
+  { path: 'admin', component: AdminComponent },
+  { path: 'player-data', component: PlayerDataComponent }
+
 ];
 
 
@@ -74,7 +77,8 @@ const routes: Routes = [
     PitcherseListComponent,
     PitcherseComponent,
     // LoginComponent,
-    AdminComponent
+    AdminComponent,
+    PlayerDataComponent
   ],
   imports: [
     BrowserModule,

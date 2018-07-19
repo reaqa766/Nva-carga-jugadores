@@ -9,3 +9,10 @@
 .letr5 {
   background-color: rgba(242, 226, 207, 0.25);
 }
+
+.PBA {
+  border: solid black 3px;
+}
+ .inline {
+   width: 100%;
+ }

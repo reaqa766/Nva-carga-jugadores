@@ -54,4 +54,9 @@ player: Observable<Players>;
 
   }
 
+  updatePlayer(player: Players) {
+    this.playerDoc = this.afs.doc(`players/${player.id}`);
+    this.playerDoc.update(player);
+  }
+
 }

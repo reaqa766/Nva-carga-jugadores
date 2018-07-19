@@ -20,7 +20,7 @@
 
     <div class="container ">
         <label for="inputLname " class="col-sm-2 col-form-label letr">Lname</label>
-      <input type="text" placeholder="Lastname" id="inputLname" class="mb-2 ml-3" name="lastname" [(ngModel)]="player.lastname">
+      <input type="text" placeholder="Lastname" id="inputLname" class="mb-2 ml-3" name="inputLname" [(ngModel)]="player.lastname">
     </div>
 
     <div class="container ">
@@ -30,22 +30,22 @@
 
     <div class="container ">
         <label for="inputCAnot " class="col-sm-2 col-form-label letr">CAnot</label>
-      <input type="number" placeholder="CAnotadas" class="mb-2 ml-3" id="inputCAnot" name="CA" [(ngModel)]="player.CA">
+      <input type="number" placeholder="CAnotadas" class="mb-2 ml-3" id="inputCA" name="CA" [(ngModel)]="player.CA">
     </div>
 
     <div class="container ">
         <label for="inputHits " class="col-sm-2 col-form-label letr">Hits</label>
-      <input type="text" placeholder="Hits" class="mb-2 ml-3" id="inputHits" name="hits" [(ngModel)]="player.hits">
+      <input type="text" placeholder="Hits" class="mb-2 ml-3" id="inputhits" name="hits" [(ngModel)]="player.hits">
     </div>
 
     <div class="container ">
         <label for="inputCEmp" class="col-sm-2 col-form-label letr">CEmpujadas</label>
-      <input type="text" placeholder="CEmpujadas" class="mb-2 ml-3" id="inputCEmp" name="CE" [(ngModel)]="player.CE">
+      <input type="text" placeholder="CEmpujadas" class="mb-2 ml-3" id="inputCE" name="CE" [(ngModel)]="player.CE">
     </div>
 
     <div class="container ">
         <label for="inputBRob " class="col-sm-2 col-form-label letr">BRobadas</label>
-      <input type="text" placeholder="Bases Robadas" class="mb-2 ml-3" id="inputBRob" name="BR" [(ngModel)]="player.BR">
+      <input type="text" placeholder="Bases Robadas" class="mb-2 ml-3" id="inputBR" name="BR" [(ngModel)]="player.BR">
     </div>
     <div class="container ">
         <label for="inputHR " class="col-sm-2 col-form-label letr">HomeRun</label>
@@ -56,12 +56,6 @@
       <button class="btn btn-primary" type="submit" (click)="onSavePlayer()">
         <i class="fas fa-plus-circle"></i> Add Player
       </button>
-       <div class="container">
-
-      <!-- <button class="btn btn-secondary my-2 ml-2" type="reset" (click)="resetForm()">
-      <i class="fas fa-sync-alt"></i>Reset
-    </button> -->
-   </div>
    </div>
 
 
@@ -85,6 +79,12 @@
 </form>
 </div>
 
+       <!-- <div class="container"> -->
+
+      <!-- <button class="btn btn-secondary my-2 ml-2" type="reset" (click)="resetForm()">
+      <i class="fas fa-sync-alt"></i>Reset
+    </button> -->
+   <!-- </div> -->
 
 
 
